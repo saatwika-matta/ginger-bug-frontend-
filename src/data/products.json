@@ -1,0 +1,86 @@
+[
+  {
+    "id": "p1",
+    "name": "Original Root",
+    "tagline": "Where it all started",
+    "description": "Our founding batch. Fresh ginger, wild culture, and nothing else. Fermented for 7 days until it finds its own balance of tart, sweet, and sharp.",
+    "price": 6.5,
+    "currency": "USD",
+    "size": "330ml",
+    "badge": "Bestseller",
+    "heatLevel": 2,
+    "available": true,
+    "imageUrl": "/placeholder-original.jpg",
+    "ingredients": [
+      "Filtered water",
+      "Organic ginger root",
+      "Cane sugar",
+      "Wild ginger culture"
+    ],
+    "batch": "001"
+  },
+  {
+    "id": "p2",
+    "name": "Turmeric Bug",
+    "tagline": "Gold-flecked and grounded",
+    "description": "Fresh turmeric root fermented alongside our ginger culture. Earthy, warm, and faintly peppery \u2014 the one people describe as 'tastes alive.'",
+    "price": 7.0,
+    "currency": "USD",
+    "size": "330ml",
+    "badge": "New",
+    "heatLevel": 1,
+    "available": true,
+    "imageUrl": "/placeholder-turmeric.jpg",
+    "ingredients": [
+      "Filtered water",
+      "Organic ginger root",
+      "Organic turmeric root",
+      "Cane sugar",
+      "Black pepper",
+      "Wild ginger culture"
+    ],
+    "batch": "002"
+  },
+  {
+    "id": "p3",
+    "name": "Habanero Reserve",
+    "tagline": "Not for the faint-hearted",
+    "description": "A small, limited reserve batch. Habanero joins the ginger mid-ferment, so the heat is fermented in, not added after. Sharp, slow, and lingering.",
+    "price": 8.5,
+    "currency": "USD",
+    "size": "330ml",
+    "badge": "Limited",
+    "heatLevel": 5,
+    "available": true,
+    "imageUrl": "/placeholder-habanero.jpg",
+    "ingredients": [
+      "Filtered water",
+      "Organic ginger root",
+      "Habanero pepper",
+      "Cane sugar",
+      "Wild ginger culture"
+    ],
+    "batch": "003"
+  },
+  {
+    "id": "p4",
+    "name": "Lemon & Bug",
+    "tagline": "Bright, sharp, easy",
+    "description": "Cold-pressed lemon added at the end of the ferment for brightness without overpowering the ginger. The one to hand a first-timer.",
+    "price": 6.5,
+    "currency": "USD",
+    "size": "330ml",
+    "badge": null,
+    "heatLevel": 2,
+    "available": true,
+    "imageUrl": "/placeholder-lemon.jpg",
+    "ingredients": [
+      "Filtered water",
+      "Organic ginger root",
+      "Cold-pressed lemon",
+      "Cane sugar",
+      "Wild ginger culture"
+    ],
+    "batch": "004"
+  }
+]
