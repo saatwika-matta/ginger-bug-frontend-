@@ -21,7 +21,7 @@ function JarIllustration({ tint }) {
   )
 }
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, addToCart }) {
   const {
     name, tagline, description, price, currency,
     size, badge, heatLevel, available, batch
@@ -61,6 +61,15 @@ export default function ProductCard({ product }) {
           )}
           <span className="product-size">{size}</span>
         </div>
+
+        <button
+          className="btn btn-primary"
+          style={{ marginTop: '0.75rem', width: '100%', justifyContent: 'center' }}
+          disabled={!available}
+          onClick={() => addToCart(product)}
+        >
+          {available ? 'Add to cart' : 'Sold out'}
+        </button>
       </div>
     </article>
   )

@@ -19,6 +19,17 @@ export async function getConfig() {
   }
 }
 
+export async function createCheckoutSession(cart, email) {
+  const res = await fetch(`${API_URL}/api/checkout`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: cart, email })
+  })
+  if (!res.ok) throw new Error('Failed to start checkout')
+  const data = await res.json()
+  return data.url
+}
+
 export async function submitContactForm(formData) {
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mykrnpza'
 

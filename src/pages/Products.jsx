@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getProducts } from '../lib/api.js'
 import ProductCard from '../components/ProductCard.jsx'
 
-export default function Products() {
+export default function Products({ addToCart }) {
   const [products, setProducts] = useState(null)
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Products() {
           </p>
         )}
         {products?.map(product => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} addToCart={addToCart} />
         ))}
       </div>
     </>
