@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
 
@@ -92,9 +92,14 @@ export default function AdminProducts() {
             <span className="eyebrow">Admin</span>
             <h1>Manage products</h1>
           </div>
-          <button className="btn btn-outline" style={{ color: 'var(--ink)', borderColor: 'var(--ink)' }} onClick={handleLogout}>
-            Log out
-          </button>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <Link to="/admin/orders" className="btn btn-outline" style={{ color: 'var(--ink)', borderColor: 'var(--ink)' }}>
+              View orders
+            </Link>
+            <button className="btn btn-outline" style={{ color: 'var(--ink)', borderColor: 'var(--ink)' }} onClick={handleLogout}>
+              Log out
+            </button>
+          </div>
         </div>
 
         {error && <p className="form-status error">{error}</p>}

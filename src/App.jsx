@@ -9,6 +9,7 @@ import Cart from './pages/Cart.jsx'
 import CheckoutSuccess from './pages/CheckoutSuccess.jsx'
 import AdminLogin from './pages/AdminLogin.jsx'
 import AdminProducts from './pages/AdminProducts.jsx'
+import AdminOrders from './pages/AdminOrders.jsx'
 
 export default function App() {
   const [cart, setCart] = useState([])
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/checkout-success" element={<CheckoutSuccess cart={cart} setCart={setCart} />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/products" element={<AdminProducts />} />
+          <Route path="/admin/orders" element={<AdminOrders />} />
         </Routes>
       </main>
       <Footer />
