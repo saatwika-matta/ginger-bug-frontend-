@@ -55,23 +55,26 @@ export default function Home() {
       </section>
 
       <section className="story">
-        <div className="story-inner">
-          <div>
-            <span className="eyebrow">The process</span>
-            <h2>{config.story_title}</h2>
-            <p>{config.story_text}</p>
-          </div>
-          <div className="story-visual" aria-hidden="true">
-            <svg viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="34" stroke="#e8a33d" strokeWidth="2" fillOpacity="0" />
-              <circle cx="50" cy="50" r="24" stroke="#e8a33d" strokeWidth="1.5" strokeDasharray="3 4" fillOpacity="0" />
-              <circle cx="50" cy="35" r="3" fill="#e8a33d" />
-              <circle cx="60" cy="55" r="2" fill="#e8a33d" />
-              <circle cx="42" cy="60" r="2.5" fill="#e8a33d" />
-            </svg>
-          </div>
-        </div>
-      </section>
+  <div className="story-inner">
+    <div>
+      <span className="eyebrow">The process</span>
+      <h2>{config.story_title}</h2>
+      <p>{config.story_text}</p>
+      <img
+        src="/backgroundimage.png"
+        alt="Wild fermentation process"
+        style={{ width: '100%', height: 'auto', display: 'block', marginTop: '1.5rem' }}
+      />
+    </div>
+    <div className="story-visual" aria-hidden="true">
+      <img
+        src="/logo.png"
+        alt="GingerBug logo"
+        style={{ width: '100%', height: 'auto', display: 'block' }}
+      />
+    </div>
+  </div>
+</section>
     </>
   )
 }

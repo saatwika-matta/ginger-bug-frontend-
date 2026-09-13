@@ -4,10 +4,9 @@ export default function Nav({ cartCount }) {
   return (
     <header className="nav">
       <div className="nav-inner">
-        <NavLink to="/" className="nav-logo">
-          <span className="bug-dot" aria-hidden="true"></span>
-          GingerBug
-        </NavLink>
+      <NavLink to="/" className="nav-logo">
+  <img src="/navlogo.png" alt="GingerBug" style={{ height: '80px', width: 'auto' }} />
+</NavLink>
         <nav>
           <ul className="nav-links">
             <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
