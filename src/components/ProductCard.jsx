@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 function getProductImage(name) {
   const map = {
     'Original Root': '/original-root.png',
@@ -13,6 +15,8 @@ export default function ProductCard({ product, addToCart }) {
     name, tagline, description, price, currency,
     size, badge, heatLevel, available, batch
   } = product
+
+  const [quantity, setQuantity] = useState(1)
 
   const currencySymbol = currency === 'USD' ? '$' : currency + ' '
 
@@ -53,11 +57,29 @@ export default function ProductCard({ product, addToCart }) {
           <span className="product-size">{size}</span>
         </div>
 
+        {available && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.75rem' }}>
+            <button
+              onClick={() => setQuantity(q => Math.max(1, q - 1))}
+              style={{ width: '32px', height: '32px', border: '1px solid var(--ink)', background: 'none', cursor: 'pointer' }}
+            >
+              −
+            </button>
+            <span style={{ fontFamily: 'var(--font-mono)', minWidth: '1.5rem', textAlign: 'center' }}>{quantity}</span>
+            <button
+              onClick={() => setQuantity(q => q + 1)}
+              style={{ width: '32px', height: '32px', border: '1px solid var(--ink)', background: 'none', cursor: 'pointer' }}
+            >
+              +
+            </button>
+          </div>
+        )}
+
         <button
           className="btn btn-primary"
           style={{ marginTop: '0.75rem', width: '100%', justifyContent: 'center' }}
           disabled={!available}
-          onClick={() => addToCart(product)}
+          onClick={() => addToCart(product, quantity)}
         >
           {available ? 'Add to cart' : 'Sold out'}
         </button>
